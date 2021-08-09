@@ -454,9 +454,13 @@ public abstract class ChartBaseManager<T extends Chart, U extends Entry> extends
 
         if (BridgeUtils.validate(propMap, ReadableType.Number, "axisMaximum")) {
             axis.setAxisMaximum((float) propMap.getDouble("axisMaximum"));
+        }else{
+            axis.resetAxisMaximum();
         }
         if (BridgeUtils.validate(propMap, ReadableType.Number, "axisMinimum")) {
             axis.setAxisMinimum((float) propMap.getDouble("axisMinimum"));
+        }else{
+            axis.resetAxisMinimum();
         }
         if (BridgeUtils.validate(propMap, ReadableType.Number, "granularity")) {
             axis.setGranularity((float) propMap.getDouble("granularity"));
