@@ -377,10 +377,14 @@ open class RNChartViewBase: UIView, ChartViewDelegate {
 
         if config["axisMaximum"].double != nil {
             axis.axisMaximum = config["axisMaximum"].doubleValue
+        }else{
+            axis.resetCustomAxisMax()
         }
 
         if config["axisMinimum"].double != nil {
             axis.axisMinimum = config["axisMinimum"].doubleValue
+        }else{
+            axis.resetCustomAxisMin()
         }
 
         if config["granularity"].double != nil {
